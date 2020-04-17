@@ -1,5 +1,7 @@
+@import "./variables.scss";
+
 * {
-  color: #3e4958;
+  color: $black;
   box-sizing: border-box;
   word-break: break-word;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
