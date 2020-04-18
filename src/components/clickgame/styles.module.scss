@@ -1,0 +1,49 @@
+@import "../../styles/variables.scss";
+
+.header {
+  margin: 0 auto;
+  padding: 40px 20px;
+  h2 {
+    font-weight: bold;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  input {
+    border: 3px solid lightgrey;
+    padding: 5px;
+    background: white;
+    margin-top: 10px;
+  }
+}
+
+.button {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+  border-radius: 50px;
+  border: 4px solid darken($blue, 8%);
+  background: $blue;
+  padding: 10px 40px;
+  margin-bottom: 20px;
+  transition: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  &:hover {
+    transition: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    background: darken($blue, 5%);
+  }
+}
+
+.stats {
+  div {
+    padding: 20px;
+    span {
+      font-size: 0.8rem;
+      font-weight: bold;
+      color: grey;
+    }
+    strong {
+      font-size: 2.2rem;
+      color: $blue;
+      font-weight: bold;
+    }
+  }
+}

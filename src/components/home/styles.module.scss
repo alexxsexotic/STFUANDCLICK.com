@@ -1,0 +1,50 @@
+@import "../../styles/variables.scss";
+
+.header {
+  padding: 60px 20px;
+  background: $blue;
+  h2 {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    color: white;
+    font-weight: 900;
+    span {
+      font-style: italic;
+      color: inherit;
+      display: block;
+      text-align: right;
+    }
+  }
+}
+
+.form {
+  padding: 20px 0;
+  form {
+    position: relative;
+    input {
+      margin: 0 auto;
+      padding: 10px 80px 10px 20px;
+      border-radius: 50px;
+      border: none;
+      outline: none;
+      box-shadow: 0px 1px 1px 1px #00000026;
+      &::placeholder {
+        color: grey;
+      }
+    }
+    button {
+      background: darken($blue, 10%);
+      color: white;
+      font-weight: 900;
+      padding: 5px 10px;
+      border-radius: 50px;
+      position: absolute;
+      right: 5px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    button[disabled] {
+      opacity: 0.6;
+    }
+  }
+}

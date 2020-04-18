@@ -1,0 +1,58 @@
+@import "../../styles/variables.scss";
+
+.table {
+  width: 100%;
+  max-width: 50rem;
+  margin: 20px auto;
+  tbody,
+  thead {
+    tr {
+      display: grid;
+      grid-template-columns: 85px 1fr auto;
+    }
+    td {
+      padding: 15px;
+      &:last-child {
+        text-align: right;
+      }
+    }
+  }
+  thead td {
+    font-weight: bold;
+    color: grey;
+  }
+  tbody {
+    tr {
+      &:nth-child(odd) {
+        background: lighten($blue, 35%);
+      }
+      &:nth-child(even) {
+        background: lighten($blue, 42%);
+      }
+      td:first-child {
+        font-weight: bold;
+      }
+    }
+    td {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+.active {
+  background: $blue !important;
+  td {
+    font-size: 1.6rem !important;
+    font-weight: bold;
+    color: white;
+  }
+}
+
+.button {
+  color: grey;
+  border-radius: 50px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  border: 2px solid lightgray;
+  padding: 5px 20px;
+}

@@ -5,9 +5,9 @@ import styles from "./styles.module.scss";
 
 export const Basic: React.FC = ({ children }) => {
   return (
-    <div className={styles._layout}>
+    <div className={`${styles._layout} flex flex-column`}>
       <Nav />
-      {children}
+      <div className="flex-1">{children}</div>
       <Footer />
     </div>
   );

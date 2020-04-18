@@ -1,0 +1,15 @@
+@import "../../styles/variables.scss";
+
+.nav {
+  padding: 10px;
+  background: $blue;
+  h1 {
+    color: white;
+    font-weight: 900;
+    font-size: 1.2rem;
+  }
+}
+
+.footer {
+  padding: 20px;
+}

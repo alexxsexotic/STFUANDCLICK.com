@@ -25,3 +25,31 @@ button {
   cursor: pointer;
   outline: none;
 }
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.al-i-center {
+  align-items: center;
+}
+
+.j-c-center {
+  justify-content: center;
+}
+
+.al-t-center {
+  text-align: center;
+}
+
+.bold {
+  font-weight: bold;
+}
