@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, cleanup, fireEvent } from '@testing-library/react';
-import { Leaderboard } from './Leaderboard';
-import Team from '../../models/Team';
+import { Leaderboard } from '../components/shared/Leaderboard';
+import Team from '../models/Team';
 
 afterEach(cleanup);
 

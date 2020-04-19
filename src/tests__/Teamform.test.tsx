@@ -1,20 +1,20 @@
 import React from 'react';
 import { cleanup, fireEvent } from '@testing-library/react';
-import { Teamform } from './Teamform';
-import renderWithRouter from '../../utils/renderWithRouter';
+import { Teamform } from '../components/home/Teamform';
+import { customRender } from './helpers/customRender';
 
 afterEach(cleanup);
 
 test('renders without crashing', () => {
   // arrange
-  const { getByPlaceholderText } = renderWithRouter(<Teamform />, {
+  const { getByPlaceholderText } = customRender(<Teamform />, {
     route: '/',
   });
 });
 
 test('not allowing to play if input is empty', () => {
   // arrange
-  const { getByPlaceholderText, getByText } = renderWithRouter(<Teamform />, {
+  const { getByPlaceholderText, getByText } = customRender(<Teamform />, {
     route: '/',
   });
   const input = getByPlaceholderText('Your team name') as HTMLInputElement;
@@ -30,7 +30,7 @@ test('not allowing to play if input is empty', () => {
 
 test('redirect on button click with input filled', () => {
   // arrange
-  const { getByPlaceholderText, getByText, history } = renderWithRouter(
+  const { getByPlaceholderText, getByText, history } = customRender(
     <Teamform />,
     {
       route: '/',
