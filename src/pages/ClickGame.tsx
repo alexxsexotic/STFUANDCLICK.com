@@ -1,13 +1,13 @@
-import React, { useState, useEffect, useCallback } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import randomstring from "randomstring";
-import { Basic as Layout } from "../layouts/Basic";
-import { Leaderboard } from "../components/shared/Leaderboard";
-import { Game } from "../components/clickgame/Game";
-import User from "../models/User";
-import Team from "../models/Team";
-import api from "../utils/api";
-import debounce from "../utils/debounce";
+import React, { useState, useEffect, useCallback } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import randomstring from 'randomstring';
+import { Basic as Layout } from '../layouts/Basic';
+import { Leaderboard } from '../components/shared/Leaderboard';
+import { Game } from '../components/clickgame/Game';
+import User from '../models/User';
+import Team from '../models/Team';
+import api from '../utils/api';
+import debounce from '../utils/debounce';
 
 export const ClickGame: React.FC<{ match: { params: { team: string } } }> = ({
   match: {
@@ -21,7 +21,7 @@ export const ClickGame: React.FC<{ match: { params: { team: string } } }> = ({
   async function fetchLeaderboard() {
     try {
       const { data } = await api({
-        endpoint: "leaderboard",
+        endpoint: 'leaderboard',
       });
       setData(data);
     } catch (err) {
@@ -40,7 +40,7 @@ export const ClickGame: React.FC<{ match: { params: { team: string } } }> = ({
   useEffect(() => {
     function setSession() {
       return dispatch({
-        type: "SET_SESSION",
+        type: 'SET_SESSION',
         payload: randomstring.generate(7),
       });
     }

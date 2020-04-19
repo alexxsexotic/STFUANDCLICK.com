@@ -1,6 +1,6 @@
-import axios, { AxiosResponse, AxiosRequestConfig } from "axios";
-import qs from "qs";
-import { apiHost } from "./hosts";
+import axios, { AxiosResponse, AxiosRequestConfig } from 'axios';
+import qs from 'qs';
+import { apiHost } from './hosts';
 
 const api = axios.create();
 
@@ -18,7 +18,7 @@ export default function (props: ApiPros): Promise<AxiosResponse> {
     params,
     withCredentials,
     paramsSerializer: (urlParams) => {
-      return qs.stringify(urlParams, { arrayFormat: "repeat" });
+      return qs.stringify(urlParams, { arrayFormat: 'repeat' });
     },
   });
 }

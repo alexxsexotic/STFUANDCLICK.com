@@ -1,8 +1,8 @@
-import User from "../models/User";
-import { SET_SESSION } from "./actionTypes";
+import User from '../models/User';
+import { SET_SESSION } from './actionTypes';
 
 const initialState: User = {
-  session: "",
+  session: '',
 };
 
 export default (state: User = initialState, action: any) => {

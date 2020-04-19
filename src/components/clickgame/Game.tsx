@@ -1,6 +1,6 @@
-import React, { useState, useRef } from "react";
-import styles from "./styles.module.scss";
-import api from "../../utils/api";
+import React, { useState, useRef } from 'react';
+import styles from './styles.module.scss';
+import api from '../../utils/api';
 
 interface GameProps {
   team: string;
@@ -21,8 +21,8 @@ export const Game: React.FC<GameProps> = ({ team, session, onChange }) => {
   async function handleClick() {
     try {
       const { data } = await api({
-        method: "post",
-        endpoint: "klik",
+        method: 'post',
+        endpoint: 'klik',
         data: { team, session },
       });
       setCount((state) => ({ ...state, ...data }));
@@ -35,8 +35,8 @@ export const Game: React.FC<GameProps> = ({ team, session, onChange }) => {
 
   function handleCopy(): void {
     inputRef.current?.select();
-    document.execCommand("copy");
-    alert("Link copied");
+    document.execCommand('copy');
+    alert('Link copied');
   }
 
   return (
@@ -46,6 +46,7 @@ export const Game: React.FC<GameProps> = ({ team, session, onChange }) => {
         <div>
           <p>Too lazy to click? Share this link:</p>
           <input
+            readOnly
             ref={inputRef}
             value={window.location.href}
             onClick={handleCopy}

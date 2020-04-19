@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import styles from "./styles.module.scss";
-import Team from "../../models/Team";
+import React, { useState } from 'react';
+import styles from './styles.module.scss';
+import Team from '../../models/Team';
 
 interface LeaderboardProps {
   data: Team[];
@@ -37,7 +37,7 @@ export const Leaderboard: React.FC<LeaderboardProps> = ({ data, team }) => {
           {filteredData.map((item) => (
             <tr
               key={item.order}
-              className={item.order === index + 1 ? styles.active : ""}
+              className={item.order === index + 1 ? styles.active : ''}
             >
               <td>{item.order}</td>
               <td>{item.team}</td>
