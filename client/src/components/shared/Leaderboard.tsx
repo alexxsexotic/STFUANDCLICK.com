@@ -7,6 +7,10 @@ interface LeaderboardProps {
   team?: string;
 }
 
+// Leaderboard has two interfaces, one for the homepage which shows all the teams
+// and another one for the invidual player limited for only near teams around his position
+// To change the interface pass the team name as a prop
+
 export const Leaderboard: React.FC<LeaderboardProps> = ({ data, team }) => {
   const [limit, setLimit] = useState(20);
   const index = data.findIndex((item) => item.team === team);

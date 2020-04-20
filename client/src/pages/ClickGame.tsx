@@ -30,6 +30,9 @@ export const ClickGame: React.FC<{ match: { params: { team: string } } }> = ({
     return;
   }
 
+  // When the user updates their click score, we update the ui for the leaderboard
+  // but to optimise rendering we use a debouncer to update the leaderboard less frequently
+
   const debounceFetch = useCallback(
     debounce(() => {
       fetchLeaderboard();
